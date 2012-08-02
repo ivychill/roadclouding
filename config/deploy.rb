@@ -2,12 +2,14 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 
+set :rvm_type, :user
+
 set :application, "roadclouding"
 set :repository,  "git@github.com:ivychill/roadclouding.git"
 
 set :scm, :git
 set :user, "caiqingfeng"
-set :deploy_to, "/home/caiqingfeng/webapps/#{application}"
+set :deploy_to, "/home/www/#{application}"
 set :keep_release, 5
 set :rvm_type, :system
 set :use_sudo, false
