@@ -9,4 +9,7 @@ Roadclouding::Application.routes.draw do
   end
   resources :users, :only => [:show, :index]
   resources :token_authentications, :only => [:create, :destroy]
+  
+  match '/auth/sina/callback' => 'auth_services#create'
+  resources :auth_services, :only => [:index, :create]
 end
