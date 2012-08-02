@@ -69,7 +69,9 @@ test:
 
 #when deploy to heroku, it has to be changed to like this:
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
 
 #production:
 #  sessions:
