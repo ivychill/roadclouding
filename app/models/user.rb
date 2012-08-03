@@ -6,7 +6,7 @@ class User
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable#, :omniauthable
+         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable
 
   before_save :ensure_authentication_token
   
@@ -58,5 +58,5 @@ class User
   field :invited_by_id, :type => String
   field :invited_by_type, :type => String
   
-  #embeds_many :auth_services
+  embeds_many :auth_services
 end
