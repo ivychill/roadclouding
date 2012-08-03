@@ -6,5 +6,6 @@ class AuthService
   field :uname, type: String
   field :uemail, type: String
   
+  attr_accessible :provider, :uid, :uname, :uemail
   embedded_in :user
 end
