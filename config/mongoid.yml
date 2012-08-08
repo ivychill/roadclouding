@@ -68,17 +68,17 @@ test:
         consistency: :strong
 
 #when deploy to heroku, it has to be changed to like this:
-production:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
-
 #production:
 #  sessions:
 #    default:
-#      database: roadclouding_production
-#      hosts:
-#        - localhost:27017
-#      options:
-#        consistency: :strong
+#      uri: <%= ENV['MONGOHQ_URL'] %>
+
+production:
+  sessions:
+    default:
+      database: roadclouding_production
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
         
