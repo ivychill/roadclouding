@@ -234,6 +234,8 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, "1087318401696.apps.googleusercontent.com", "oxKGcU_wPxuR0xqi4dpEQX2l", { access_type: "offline", approval_prompt: "" }
   require 'omniauth-facebook'
   config.omniauth :facebook, "1087318401696.apps.googleusercontent.com", "oxKGcU_wPxuR0xqi4dpEQX2l", { access_type: "offline", approval_prompt: "" }
+  require 'omniauth-weibo-oauth2'
+  config.omniauth :weibo, "965786231", "8c909a6ec2cb16c5923c81eb75d8cef7"
   
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
