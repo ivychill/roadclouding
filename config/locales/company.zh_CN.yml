@@ -1,0 +1,32 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh_CN:
+  company:
+    name:
+      深圳市路云信息科技有限公司
+    intro:
+      深圳市路云信息科技有限公司
+  smart_route:
+    title:
+      多源探测智能交通
+    intro:
+      中国社会汽车的普及率越来越高，（陈峰）中国社会汽车的普及率越来越高，（陈峰）中国社会汽车的普及率越来越高，（陈峰）中国社会汽车的普及率越来越高，（陈峰）中国社会汽车的普及率越来越高，（陈峰）
+  learn_more:
+    了解更多
+  highlights:
+    usp1:
+      title:
+        官方信息与众包信息来源无缝融合
+      details:
+        官方信息与众包信息来源无缝融合（叶松海）官方信息与众包信息来源无缝融合（叶松海）官方信息与众包信息来源无缝融合（叶松海）官方信息与众包信息来源无缝融合（叶松海）官方信息与众包信息来源无缝融合（叶松海）官方信息与众包信息来源无缝融合（叶松海）
+    usp2:
+      title:
+        iOS/Android/Web跨平台
+      details:
+        iOS/Android/Web跨平台（叶松海）iOS/Android/Web跨平台（叶松海）iOS/Android/Web跨平台（叶松海）iOS/Android/Web跨平台（叶松海） 
+    usp3:
+      title:
+        支持百度、高德等中国版地图
+      details:
+        支持百度、高德等中国版地图（叶松海）支持百度、高德等中国版地图（叶松海）支持百度、高德等中国版地图（叶松海）支持百度、高德等中国版地图（叶松海）       

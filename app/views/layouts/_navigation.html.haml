@@ -1,14 +1,26 @@
-= link_to "Roadclouding", root_path, :class => 'brand'
+= link_to I18n.t("Roadclouding"), root_path, :class => 'brand'
 %ul.nav
   - if user_signed_in?
     %li
-      = link_to('Logout', destroy_user_session_path, :method=>'delete')
+      = link_to(I18n.t('Logout'), destroy_user_session_path, :method=>'delete')
   - else
     %li
-      = link_to('Login', new_user_session_path)
+      = link_to(I18n.t('Login'), new_user_session_path)
   - if user_signed_in?
     %li
-      = link_to('Edit account', edit_user_registration_path)
+      = link_to(I18n.t('Edit account'), edit_user_registration_path)
   - else
     %li
-      = link_to('Sign up', new_user_registration_path)
+      = link_to(I18n.t('Sign up'), new_user_registration_path)
+  %li
+    %li.locale
+      [
+    %li.locale
+      = link_to(I18n.t('English'), {:locale=>'en'})
+    %li.locale
+      ][
+    %li.locale
+      = link_to(I18n.t('Chinese'), {:locale=>'zh_CN'})
+    %li.locale
+      ]
+      

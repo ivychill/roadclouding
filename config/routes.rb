@@ -1,4 +1,6 @@
 Roadclouding::Application.routes.draw do
+  get "locales/toggle"
+
   authenticated :user do
     root :to => 'home#index'
   end
@@ -11,5 +13,4 @@ Roadclouding::Application.routes.draw do
   end
   resources :users, :only => [:show, :index]
   resources :token_authentications, :only => [:create, :destroy]
-  
 end

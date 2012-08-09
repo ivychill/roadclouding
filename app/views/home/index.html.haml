@@ -1,3 +1,38 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+%div.hero-unit
+  %h1 
+    =t "smart_route.title"
+  %p 
+    =t "smart_route.intro"
+  %p
+    %a.btn.btn-primary.btn-large 
+      =t "learn_more"
+      &raquo;
+%div.row
+  %div.span4
+    %h2
+      =t "highlights.usp1.title"
+    %p 
+      =t "highlights.usp1.details"
+    %p
+      %a.btn.btn-primary.btn-large 
+        =t "learn_more"
+        &raquo;
+  %div.span4
+    %h2
+      =t "highlights.usp2.title"
+    %p 
+      =t "highlights.usp2.details"
+    %p
+      %a.btn.btn-primary.btn-large 
+        =t "learn_more"
+        &raquo;
+  %div.span4
+    %h2
+      =t "highlights.usp3.title"
+    %p 
+      =t "highlights.usp3.details"
+    %p
+      %a.btn.btn-primary.btn-large 
+        =t "learn_more"
+        &raquo;
+        

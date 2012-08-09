@@ -229,7 +229,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   require 'omniauth-github'
-  config.omniauth :github, '6c1cac8a856b82a2a86d', 'df02bd4b2d3248fb56a4bcb39627d9bc6826e9a9', :scope=>'user, public_repo'
+  config.omniauth :github, '6c1cac8a856b82a2a86d', 'df02bd4b2d3248fb56a4bcb39627d9bc6826e9a9', :scope=>'user, public_repo'#, :client_options => {:ssl => {:ca_path => '/etc/ssl/private'}}
   require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2, "1087318401696.apps.googleusercontent.com", "oxKGcU_wPxuR0xqi4dpEQX2l", { access_type: "offline", approval_prompt: "" }
   require 'omniauth-facebook'
