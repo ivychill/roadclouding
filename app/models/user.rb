@@ -106,12 +106,12 @@ class User
   
   def self.find_for_weibo_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
-    logger.debug data
-    user = User.where(:name => data["name"]).first #sina doesn't return email at all, use name instead
+    #logger.debug data
+    user = User.where(:email => data["name"]+"@roadclouding.com").first #sina doesn't return email at all, use name instead
 
     unless user
         user = User.create(name: data["name"], 
-	    		   #email: data["email"],
+	    		   email: data["name"]+"@roadclouding.com",
 	    		   password: Devise.friendly_token[0,20]
 	    		  )
     end
