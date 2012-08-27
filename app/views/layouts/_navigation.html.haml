@@ -12,15 +12,16 @@
   - else
     %li
       = link_to(I18n.t('Sign up'), new_user_registration_path)
+  %li#about
+    = link_to(I18n.t('About'), about_path)
+  %li#download
+    = link_to(I18n.t('Download'), "#")
+  %li#carrier
+    = link_to(I18n.t('Carrier'), carrier_path)
   %li
-    %li.locale
-      [
-    %li.locale
-      = link_to(I18n.t('English'), {:locale=>'en'})
-    %li.locale
-      ][
-    %li.locale
-      = link_to(I18n.t('Chinese'), {:locale=>'zh_CN'})
-    %li.locale
-      ]
-      
+    %table
+      %tr
+        %td
+          = link_to(I18n.t('English'), {:locale=>'en'})
+        %td
+          = link_to(I18n.t('Chinese'), {:locale=>'zh_CN'})      

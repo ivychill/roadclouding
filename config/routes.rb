@@ -1,5 +1,10 @@
 Roadclouding::Application.routes.draw do
   get "locales/toggle"
+  get "home/about"
+  get "home/download"
+  match 'about' => 'home#about'
+  match 'download' => 'home#download'
+  match 'carrier' => 'home#carrier'
 
   authenticated :user do
     root :to => 'home#index'

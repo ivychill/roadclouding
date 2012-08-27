@@ -228,14 +228,16 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  require 'omniauth-weibo-oauth2'
+  config.omniauth :weibo, "3480490775", "876dd843606f5d99d86e716cc1c69264"
+  #require 'omniauth-tqq'
+  #config.omniauth :tqq, "100651579", "9f96394797c55b60c05a1d717f756dc0"
   require 'omniauth-github'
   config.omniauth :github, '6c1cac8a856b82a2a86d', 'df02bd4b2d3248fb56a4bcb39627d9bc6826e9a9', :scope=>'user, public_repo'#, :client_options => {:ssl => {:ca_path => '/etc/ssl/private'}}
   require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2, "1087318401696.apps.googleusercontent.com", "oxKGcU_wPxuR0xqi4dpEQX2l", { access_type: "offline", approval_prompt: "" }
   require 'omniauth-facebook'
   config.omniauth :facebook, "1087318401696-eqv4kahkibb112n92vd1f1p1gsjf8l1u.apps.googleusercontent.com", "l-CdM00aiCAC_DUY4Q6h66Na", { access_type: "offline", approval_prompt: "" }
-  require 'omniauth-weibo-oauth2'
-  config.omniauth :weibo, "3480490775", "876dd843606f5d99d86e716cc1c69264"
   
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
