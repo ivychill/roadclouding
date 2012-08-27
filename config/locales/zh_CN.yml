@@ -3,9 +3,9 @@
 
 zh_CN:
   English:
-    en
+    ［English］
   Chinese:
-    cn
+    ［中文］
   Roadclouding:
     路云
   Login:
@@ -22,6 +22,8 @@ zh_CN:
     下载
   Carrier:
     招贤纳士
+  Follow:
+    关注我们
   date:
     abbr_day_names:
     - 日

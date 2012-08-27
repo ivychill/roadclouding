@@ -1,10 +1,8 @@
 Roadclouding::Application.routes.draw do
-  get "locales/toggle"
-  get "home/about"
-  get "home/download"
   match 'about' => 'home#about'
   match 'download' => 'home#download'
   match 'carrier' => 'home#carrier'
+  match 'follow' => 'home#follow'
 
   authenticated :user do
     root :to => 'home#index'
@@ -18,4 +16,5 @@ Roadclouding::Application.routes.draw do
   end
   resources :users, :only => [:show, :index]
   resources :token_authentications, :only => [:create, :destroy]
+  
 end

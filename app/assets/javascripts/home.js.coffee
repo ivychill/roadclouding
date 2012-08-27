@@ -4,6 +4,11 @@
 
 $(document).ready ->
 	#testAjaxLogin()
+	$('#follow').click( ->
+			#alert(I18n.t("luyun.follow"))
+			alert("官方微博：移动APP开发工作室\n技术博客：http://www.cnblogs.com/mobileinternet")
+			return false
+		)
 	return
 
 testAjaxLogin = () -> 
