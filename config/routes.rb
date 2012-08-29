@@ -3,6 +3,7 @@ Roadclouding::Application.routes.draw do
   match 'download' => 'home#download'
   match 'carrier' => 'home#carrier'
   match 'follow' => 'home#follow'
+  match 'contact' => 'home#contact'
 
   authenticated :user do
     root :to => 'home#index'

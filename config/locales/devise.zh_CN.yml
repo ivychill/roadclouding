@@ -19,6 +19,7 @@ zh_CN:
       timeout: "会话超时。若要继续，请重新登录。"
       unauthenticated: "请您登录或注册。"
       unconfirmed: "你必须先验证帐号才能继续。"
+      already_authenticated: "您已经登录。"
     invitations:
       invitation_token_invalid: "邀请码验证失败。"
       send_instructions: "邀请发送成功。"
