@@ -161,6 +161,10 @@ GEM
     omniauth-oauth2 (1.1.0)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    omniauth-qq (0.2.1)
+      multi_json
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     omniauth-weibo-oauth2 (0.2.0)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
@@ -270,6 +274,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-github
   omniauth-google-oauth2
+  omniauth-qq
   omniauth-weibo-oauth2
   rails (= 3.2.3)
   rspec-rails (>= 2.11.0)

@@ -230,8 +230,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   require 'omniauth-weibo-oauth2'
   config.omniauth :weibo, "3480490775", "876dd843606f5d99d86e716cc1c69264"
-  #require 'omniauth-tqq'
-  #config.omniauth :tqq, "100651579", "9f96394797c55b60c05a1d717f756dc0"
+  require 'omniauth-qq'
+  config.omniauth :qq_connect, "100300929", "0b71ff98b25d85a1015dc6b329ef5e63"
   require 'omniauth-github'
   config.omniauth :github, '6c1cac8a856b82a2a86d', 'df02bd4b2d3248fb56a4bcb39627d9bc6826e9a9', :scope=>'user, public_repo'#, :client_options => {:ssl => {:ca_path => '/etc/ssl/private'}}
   require 'omniauth-google-oauth2'
