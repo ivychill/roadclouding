@@ -1,0 +1,2 @@
+module TrackEventsHelper
+end

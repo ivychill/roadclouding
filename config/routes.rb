@@ -1,4 +1,5 @@
 Roadclouding::Application.routes.draw do
+  resources :track_events, :only => [:show, :index]
   match 'about' => 'home#about'
   match 'download' => 'home#download'
   match 'carrier' => 'home#carrier'
