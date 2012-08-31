@@ -51,5 +51,17 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+  def qq_connect
+    # You need to implement the method below in your model (e.g. app/models/user.rb)
+    @user = User.find_for_qq_connect(request.env["omniauth.auth"], current_user)
+    if @user.persisted?
+      @user.skip_confirmation!
+      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "qq_connect"
+      sign_in_and_redirect @user, :event => :authentication
+    else
+      session["devise.qq_data"] = request.env["omniauth.auth"]
+      redirect_to new_user_registration_url
+    end
+  end
 
 end

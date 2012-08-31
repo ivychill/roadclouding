@@ -118,4 +118,18 @@ class User
     user
   end
 
+  def self.find_for_qq_connect(access_token, signed_in_resource=nil)
+    data = access_token.info
+    logger.info data
+    user = User.where(:name => data["OpenId"]).first 
+
+    unless user
+        user = User.create(name: data["name"], 
+	    		   email: Devise.friendly_token[0,20]+"@roadclouding.com",
+	    		   password: Devise.friendly_token[0,20]
+	    		  )
+    end
+    user
+  end
+
 end

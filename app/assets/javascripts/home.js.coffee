@@ -14,6 +14,13 @@ $(document).ready ->
 			alert("Email: webmaster@roadclouding.com\n公司注册地址：广东省深圳市宝安25区前进一路华丰时代广场四楼D80")
 			return false
 		)
+	$('#slides').slides({
+				preload: true,
+				preloadImage: 'loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+		})
 	return
 
 testAjaxLogin = () -> 
