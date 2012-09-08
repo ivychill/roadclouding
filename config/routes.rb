@@ -15,6 +15,7 @@ Roadclouding::Application.routes.draw do
   devise_scope :user do
     resources :sessions, :only => [:create, :destroy]
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    get '/users/profile'
   end
   resources :users, :only => [:show, :index]
   resources :token_authentications, :only => [:create, :destroy]
