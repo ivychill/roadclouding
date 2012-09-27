@@ -8,7 +8,7 @@ set :application, "roadclouding"
 set :repository,  "git@github.com:ivychill/roadclouding.git"
 
 set :scm, :git
-set :user, "caiqingfeng"
+set :user, "roadclouding"
 set :deploy_to, "/home/www/#{application}"
 set :keep_release, 5
 set :rvm_type, :system
