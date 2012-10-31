@@ -10,6 +10,13 @@ zh_CN:
   luyun:
     follow:
       官方微博：移动APP开发工作室,技术博客：http://www.cnblogs.com/mobileinternet
+    download:
+      iPhone:
+        name:
+          iPhone
+      Android:
+        name:
+          Android
     portfolio:
       95faster:
         name:

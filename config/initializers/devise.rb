@@ -229,7 +229,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   require 'omniauth-weibo-oauth2'
-  config.omniauth :weibo, "3480490775", "876dd843606f5d99d86e716cc1c69264"
+  config.omniauth :weibo, "3480490775", "876dd843606f5d99d86e716cc1c69264", :authorize_params => { :display => 'mobile' }
   require 'omniauth-qq'
   config.omniauth :qq_connect, "100300929", "0b71ff98b25d85a1015dc6b329ef5e63"
   require 'omniauth-github'

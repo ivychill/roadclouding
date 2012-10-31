@@ -1,6 +1,6 @@
 class SessionsController < Devise::SessionsController
   def create
-    cookies.permanent[:auth_token] = current_user.authentication_token
+#    cookies.permanent[:auth_token] = current_user.authentication_token
     
     respond_to do |format|
       format.html { super }

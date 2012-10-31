@@ -1,0 +1,2 @@
+module WeibosHelper
+end

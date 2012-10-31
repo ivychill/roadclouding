@@ -1,4 +1,7 @@
 Roadclouding::Application.routes.draw do
+  get "weibos/get"
+  post 'weibos/post'
+  
   resources :track_events, :only => [:show, :index]
   match 'about' => 'home#about'
   match 'download' => 'home#download'
@@ -16,6 +19,7 @@ Roadclouding::Application.routes.draw do
     resources :sessions, :only => [:create, :destroy]
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
     get '/users/profile'
+    get '/users/sign_out' => 'sessions#destroy'
   end
   resources :users, :only => [:show, :index]
   resources :token_authentications, :only => [:create, :destroy]

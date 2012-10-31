@@ -44,11 +44,6 @@ class User
 
   ## Token authenticatable
   field :authentication_token, :type => String
-  
-  ## for post weibo
-  field :visit_token, :type => String
-  field :expires_at, :type => Integer
-  field :will_expire, :type => Boolean
 
   ## omniauthable
   field :uid, :type => String
@@ -58,7 +53,7 @@ class User
   index({ email: 1 }, { unique: true, background: true })
   field :name, :type => String
   validates_presence_of :name
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :confirmed_at, :created_at, :updated_at, :authentication_token, :visit_token, :expires_at, :will_expire, :uid, :provider
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :confirmed_at, :created_at, :updated_at, :authentication_token, :uid, :provider
   #invitable
   field :invitation_token, :type => String
   field :invitation_sent_at, :type => Time
@@ -112,16 +107,15 @@ class User
   def self.find_for_weibo_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     logger.info data
+    credentials = access_token.access_token
+    logger.info credentials
     user = User.where(:name => data["name"]).first #sina doesn't return email at all, use name instead
 
     unless user
         user = User.create(name: data["name"], 
 	    		   email: Devise.friendly_token[0,20]+"@roadclouding.com",
-	    		   password: Devise.friendly_token[0,20]
-	    		   # provider: access_token.provider,
-	    		   # visit_token: access_token.credentials.token,
-	    		   # expires_at: access_token.credentials.expires_at,
-	    		   # will_expire: access_token.credentials.expires
+	    		   password: Devise.friendly_token[0,20],
+	    		   authentication_token: credentials["token"]
 	    		  )
     end
     user
