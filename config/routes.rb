@@ -8,6 +8,8 @@ Roadclouding::Application.routes.draw do
   match 'career' => 'home#career'
   match 'follow' => 'home#follow'
   match 'contact' => 'home#contact'
+  match 'commerce' => 'home#commerce'
+  match 'faq' => 'home#faq'
 
   authenticated :user do
     root :to => 'home#index'

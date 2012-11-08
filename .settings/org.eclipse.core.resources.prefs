@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//app/views/home/commerce.html.haml=UTF-8
+encoding//app/views/home/faq.html.haml=UTF-8
 encoding//app/views/layouts/_messages.html.haml=UTF-8
 encoding//app/views/layouts/application.html.haml=UTF-8
 encoding//config/locales/company.en.yml=UTF-8
