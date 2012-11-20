@@ -72,8 +72,8 @@ Roadclouding::Application.configure do
                       :address        => "smtp.gmail.com",
                       :port           => 587,
                       :authentication => :plain,
-                      :user_name      => "ruiyi12.cai@gmail.com",
-                      :password       => "tor098NADO"
+                      :user_name      => "roadclouding@gmail.com",
+                      :password       => "roadroadroad3"
   }
 
 end
