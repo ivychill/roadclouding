@@ -73,7 +73,7 @@ Roadclouding::Application.configure do
                       :port           => 587,
                       :authentication => :plain,
                       :user_name      => "ruiyi12.cai@gmail.com",
-                      :password       => "cqf123ENG"
+                      :password       => "tor098NADO"
   }
 
 end
