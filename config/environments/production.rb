@@ -61,13 +61,19 @@ Roadclouding::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  config.action_mailer.default_url_options = { :host => 'roadclouding.com' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
-
+  ActionMailer::Base.smtp_settings = {
+                      :address        => "smtp.gmail.com",
+                      :port           => 587,
+                      :authentication => :plain,
+                      :user_name      => "roadclouding@gmail.com",
+                      :password       => "roadroadroad3"
+  }
 
 end
