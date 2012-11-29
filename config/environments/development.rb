@@ -21,11 +21,11 @@ Roadclouding::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
   ActionMailer::Base.smtp_settings = {
-                      :address        => "smtp.gmail.com",
-                      :port           => 587,
+                      :address        => "smtp.exmail.qq.com",
+                      :port           => 25,
                       :authentication => :plain,
-                      :user_name      => "roadclouding@gmail.com",
-                      :password       => "roadroadroad3"
+                      :user_name      => "webmaster@roadclouding.com",
+                      :password       => "RoadRoadRoad3"
   }
 
 
