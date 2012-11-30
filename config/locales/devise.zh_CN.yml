@@ -113,6 +113,6 @@ zh_CN:
       not_locked: "未锁定"
       expired: "已过期，请申请一个新的"
       not_saved:
-        one: "1 错误禁止这个 %{resource} 被保存:"
-        other: "%{count} 错误禁止这个 %{resource} 被保存:"
+        one: "因为 1 个错误导致此 %{resource}保存失败:"
+        other: "因为 %{count}个错误导致此 %{resource}保存失败:"
       
