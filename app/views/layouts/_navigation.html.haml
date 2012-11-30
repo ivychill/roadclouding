@@ -1,16 +1,16 @@
 = link_to I18n.t("Roadclouding"), root_path, :class => 'brand'
 %ul.nav
   - if user_signed_in?
-    %li
+    %li.nav
       = link_to(I18n.t('Logout'), destroy_user_session_path, :method=>'delete')
   - else
-    %li
+    %li.nav
       = link_to(I18n.t('Login'), new_user_session_path)
   - if user_signed_in?
-    %li
+    %li.nav
       = link_to(I18n.t('Edit account'), edit_user_registration_path)
   - else
-    %li
+    %li.nav
       = link_to(I18n.t('Sign up'), new_user_registration_path)
   %li.nav
     = link_to(I18n.t('Download'), download_path)
