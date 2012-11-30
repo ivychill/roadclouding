@@ -1,5 +1,5 @@
-<p>I18n.t('Welcome') <%= @resource.email %>!</p>
+<p>欢迎您，<%= @resource.email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>您可以通过下面的链接确认您的帐户的电子邮件：</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p><%= link_to '确认我的帐户', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
