@@ -6,12 +6,12 @@ $(document).ready ->
 	#testAjaxLogin()
 	$('#follow').click( ->
 			#alert(I18n.t("luyun.follow"))
-			alert("官方微博：移动APP开发工作室\n技术博客：http://www.cnblogs.com/mobileinternet")
+			alert("新浪微博：路云科技\n技术博客：http://www.cnblogs.com/mobileinternet")
 			return false
 		)
 	$('#contact').click( ->
 			#alert(I18n.t("luyun.follow"))
-			alert("Email: webmaster@roadclouding.com\n公司注册地址：广东省深圳市宝安25区前进一路华丰时代广场四楼D80")
+			alert("Email: webmaster@roadclouding.com\n地址：广东省深圳市宝安25区前进一路华丰时代广场四楼D93")
 			return false
 		)
 	$('#slides').slides({
